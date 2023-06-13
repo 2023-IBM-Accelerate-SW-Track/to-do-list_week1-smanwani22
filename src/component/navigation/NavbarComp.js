@@ -7,8 +7,8 @@ import {
     Route, 
     Link
 } from "react-router-dom"
-import About from "../../pages/About";
-import Home from "../../pages/Home";
+import About from "../../pages/About.js";
+import Home from "../../pages/Home.js";
 
 export default class NavbarComp extends Component {
     render() {

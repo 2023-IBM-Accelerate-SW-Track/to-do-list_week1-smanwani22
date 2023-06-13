@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import AddTodo from "../component/AddTodo.js";
+import Todos from "../component/todos.js";
+import "./Home.css";
 
 class Home extends Component {
   // A default state of this component with an empty list of todos.
   constructor() {
     super();
     this.state = {
+      todos: [],
       // create your empty list here call it todos.
     };
   }
@@ -27,8 +31,9 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <p> Replace this</p>
+        <AddTodo addTodo={this.addTodo} /> {/* Pass the addTodo function */}
         <h1>Todo's </h1>
+        <Todos todos={this.state.todos} /> {/* Pass the current todo list state */}
       </div>
     );
   }
